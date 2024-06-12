@@ -82,16 +82,98 @@ You can use this query to get the list of books to display in your frontend. You
 - User experience and design.
 - Beautiful and responsive UI.
 
-Running the Ello Front End App 
-cd to frontend 
- Build the Docker image:
+Starting the Apps with Docker Compose
+`Starting the Apps with Docker Compose
 
-`**docker build -t ellofrontend .**
-`
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/your/repository.git
+   cd repository-name `
 
-Run the Docker container:
+1.  **Build and Start the Docker Containers**:
 
-`docker run -p 3000:3000 ellofrontend
-`
+    sh
+
+    Copy code
+
+    `docker-compose up --build`
+
+    This command will build the Docker images (if not already built) and start the containers for both frontend and backend services.
+
+2.  **Access the Applications**:
+
+ -   Frontend: Open your browser and go to `http://localhost:3000`.
+ -   Backend: Backend APIs are accessible within the Docker network at `http://ello-backend:4000`.
+
+### Stopping the Apps with Docker Compose
+
+To stop and remove the Docker containers created by Docker Compose, use the following command:
+
+sh
+
+Copy code
+
+    `docker-compose down --rmi all -v`
+
+
+This command will stop and remove containers, remove images, and delete volumes associated with the containers.
+
+
+
+
+#### Running the Apps without Docker
+
+#### Frontend App Setup
+
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/your/frontend-repo.git`
+
+1.  **Install Dependencies**:
+
+    cd frontend-repo
+sh
+
+    Copy code
+
+    `npm install`
+
+2.  **Start the Frontend App**:
+
+    sh
+
+    Copy code
+
+    `npm start`
+
+    This will start the frontend app on `http://localhost:3000`.
+
+
+
+
+#### Backend App Setup
+
  
-Access your app at http://localhost:3000.
+
+1 **Install Dependencies**:
+
+    sh
+
+    Copy code
+
+    `npm install`
+
+2 **Start the Backend App**:
+
+cd backend folder
+    sh
+
+    Copy code
+
+    `npm start`
+
+    The backend APIs will be accessible on `http://localhost:4000`.
+
+### Stopping the Apps
+
+To stop the frontend and backend apps, you can use `Ctrl + C` in the terminal where they are running to terminate the processes
