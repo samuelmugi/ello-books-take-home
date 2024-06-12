@@ -1,0 +1,4 @@
+/backend/node_modules/
+/.idea/
+/frontend/build/
+/frontend/node_modules/

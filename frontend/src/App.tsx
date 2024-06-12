@@ -3,8 +3,9 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import MainApp from './MainApp';
 
 // Initialize Apollo Client
+const BASE_URL=process.env.REACT_APP_BASE_URL;
 const client = new ApolloClient({
-    uri: 'http://localhost:4000/', // Your GraphQL server URL
+    uri: BASE_URL, // Your GraphQL server URL
     cache: new InMemoryCache()
 });
 

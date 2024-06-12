@@ -82,4 +82,16 @@ You can use this query to get the list of books to display in your frontend. You
 - User experience and design.
 - Beautiful and responsive UI.
 
+Running the Ello Front End App 
+cd to frontend 
+ Build the Docker image:
 
+`**docker build -t ellofrontend .**
+`
+
+Run the Docker container:
+
+`docker run -p 3000:3000 ellofrontend
+`
+ 
+Access your app at http://localhost:3000.
